@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>按钮真是太可怕了</title>
+</head>
+
+<body>
+<div>
+    <img id="image2" src="xx-bg.png">
+</div>
+
+<div class="img">
+    <img id="image" src="xx.png">
+</div>
+
+<div class="btn">
+    <button id="xx" style="color:#291a1a; background:url(btn-blue.png) no-repeat" >小新</button><br>
+    <button id="bw" style="color:#a9dae4; background:url(btn-gray.png) no-repeat">巴卫</button>
+</div>
+
+<script>
+    var btn1=document.getElementById("xx");
+    var btn2=document.getElementById("bw");
+    var img=document.getElementById("image");
+    var img1=document.getElementById("image2");
+    for (var i=0;i<=1000;i++) {
+        btn1.onclick = function () {
+            img.setAttribute("src", "xx.png");
+            img1.setAttribute("src", "xx-bg.png");
+            btn1.style.backgroundImage = "url(btn-blue.png)";
+            btn1.style.color = "#291a1a";
+            btn2.style.backgroundImage = "url(btn-gray.png)";
+            btn2.style.color = "#a9dae4";
+        }
+        btn2.onclick = function () {
+            img.setAttribute("src", "bw.png");
+            img1.setAttribute("src", "bw-bg.png");
+            btn2.style.backgroundImage = "url(btn-blue.png)";
+            btn2.style.color = "#291a1a";
+            btn1.style.backgroundImage = "url(btn-gray.png)";
+            btn1.style.color = "#a9dae4";
+        }
+    }
+//    document.onclick=function() {
+//        var obj = event.srcElement;
+//        if (obj.type == "bw") {
+//            btn1.style.backgroundImage = "url(btn-gray.png)";
+//            btn1.style.color = "#a9dae4";
+//        }
+//        if (obj.type == "xx") {
+//            btn2.style.backgroundImage = "url(btn-gray.png)";
+//            btn2.style.color = "#a9dae4";
+//        }
+//    }
+</script>
+</body>
+</html>
