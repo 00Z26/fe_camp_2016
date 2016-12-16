@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Raphaelicons";
+    src: url('fonts/raphaelicons-webfont.ttf') format('ttf'),
+    url('fonts/raphaelicons-webfont.eot') format('eot'),
+    url('fonts/raphaelicons-webfont.svg') format('svg'),
+    url('fonts/raphaelicons-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html { overflow: hidden; }
+body{
+    font-size: 13px;
+
+}
+.nav-strong{
+    position: absolute;
+    margin-left: 825px;
+    margin-top: 15px;
+    width:290px;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+.nav  a{
+    color:#515151;
+}
+.nav-thin{
+    position: absolute;
+    margin-left: 1080px;
+    margin-top: 15px;
+    width:200px;
+    height:40px;
+}
+.logo>img{
+
+    heigth:12px;
+    width: 270px;
+    overflow: hidden;
+}
+.logo{
+    margin-left: 497px;
+    margin-top:35px;
+    position: absolute;
+}
+.search{
+    margin-left: 320px;
+    margin-top: 200px;
+    position: absolute;
+    width:400px;
+}
+
+.btn1 {
+    background-color: #3385FF;
+    border:none;
+    width:95px;
+    height:36px;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+.input1{
+    width:536px;
+    height:30px;
+    padding-left: 3px;
+    font-size:20px;
+
+
+
+}
+.btn{
+    position: absolute;
+    margin-left: 540px;
+    margin-top:-36px;
+
+
+
+}
+.bd-ph{
+    position: absolute;
+    margin-left: 595px;
+    margin-top:400px;
+}
+.bd-ph1{
+    width: 70px;
+
+}
+.foot{
+    text-align: center;
+    margin-top: 500px;
+    position: absolute;
+    margin-left: 410px;
+    font-size:11px;
+    color:#515151;
+}
+.foot a{
+    color: #B1B1B1;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.nav a:hover{
+    color: #3b3ce5;
+}
+.btn:hover{
+    box-shadow: 1px 1px 1px rgba(51,51,51,0.6);
+}
+.letter{
+    font-family: "Raphaelicons";
+    position: absolute;
+    font-size:35px;
+    margin-left: 503px;
+    margin-top: -34px;
+    color:black;
+    cursor:pointer;
+}
+.letter:hover{
+    color:#3385FF;
+}
+.fot1{
+    width: 15px;
+    height: 18px;
+}
+.fot{
+    margin-left: 708px;
+    position: absolute;
+    margin-top: 520px;
+}
+.blu{
+    color: white;
+    background-color: #3385FF;
+    text-decoration: none;
+}
+ul li {
+    list-style:none;
+    float:left;
+}

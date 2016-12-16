@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Raphaelicons";
+    src: url('fonts/raphaelicons-webfont.ttf') format('ttf'),
+         url('fonts/raphaelicons-webfont.eot') format('eot'),
+         url('fonts/raphaelicons-webfont.svg') format('svg'),
+         url('fonts/raphaelicons-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style:normal;
+}/*在本页面中引入这种字体，可以用这种字体定义*/
+body{
+    background-color: #ddd;
+    font-weight: 400;
+    font-size: 15px;
+    color:#333;
+    overflow: hidden;/*溢出隐藏*/
+    -webkit-font-smoothing:antialiased;/*无锯齿*/
+}
+a{
+    text-decoration:none; /*无下划线*/
+    color:#555;
+}
+.clr{                   /*清除浮动*/
+    width:0;
+    height:0;
+    overflow: hidden;
+    clear:both;
+    padding:0;
+    margin: 0;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    font-family: Arial,Serif;/*可更改字体*/
+}
+.nav-container > input,
+.nav-container > a{
+    width:25%;
+    height:39px;
+    line-height:39px;
+    position: fixed;/*保持在最下端*/
+    bottom: 0;
+    cursor:pointer;/*光标改成手型*/
+}
+.nav-container > input{
+    opacity:0;/*隐藏一个元素有diaplay:none position:absolute left:-99999;visibility:hidden这些方法*/
+    z-index: 999;/*优先级*/
+}
+.nav-container > a{/*给链接设置不是给输入框*/
+    z-index: 10;
+    font-weight: 700;
+    font-size: 16px;
+background-color:#66CCFF ;
+    /*background-color: #e23a6e;!*按钮背景颜色*!*/
+    text-align: center;
+    color:#ffffff;/*按钮上字的颜色*/
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);/*给文字加阴影*/
+}
+#nav-control-1,#nav-control-1 + a{  /* 用+ 不用~  ~意思是1后面的所有链接都会被选上 */
+    left:0%;
+}
+#nav-control-2,#nav-control-2 + a{
+    left:25%;
+}
+#nav-control-3,#nav-control-3 + a{
+    left:50%;
+}
+#nav-control-4,#nav-control-4 + a{
+    left:75%;
+}
+.nav-container input:checked + a,
+.nav-container input:checked:hover + a {   /*被选中时背景颜色改变 鼠标悬浮时不变化*/
+    /*background-color: #821134;*/
+    background-color: #6699CC;
+
+}
+.nav-container input:checked + a:after{  /*设置按钮上方的三角形被点击后出现*/
+    content: "";
+    height:0;
+    width: 0;
+    border : 22px solid transparent;/*不懂什么意思！！！*/
+    overflow:hidden;
+    border-bottom-color:#6699CC;
+    /*border-bottom-color: #821134;*/
+    position:absolute;
+    bottom:100%;/*让他一直在按钮上方????*/
+    left:50%;
+    margin-left:-22px;/*将三角形向左移动它自己的一半使它在按钮中间*/
+}
+.nav-container input:hover +a{/*鼠标悬浮时颜色变化*/
+    /*background-color: #ad244f;*/
+    background-color:#6699FF;
+}
+/*接下来是内容*/
+.main,
+.main1{/*每个页面只有一个，占页面的全部空间*/
+    height:100%;
+    width:100%;
+    position: relative;
+}
+.main{
+    left:0;
+    top:0;
+    -webkit-transform:translate3d(0,0,0);/*转换用的是上下移动，轮换式的*/
+    -moz-transform:translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility:hidden;/*当元素不面对屏幕时不可见*/
+    -webkit-transition: all 0.6s ease-in-out;/*设置切换时的动态，在0.6秒内换完，有兼容问题，由慢到快再变慢*/
+}
+.main1{
+    background-color: #fff;
+    overflow:hidden;
+}/*这个样式是干嘛的？？？*/
+#nav-control-1:checked~.main{/*获取点击时main的内容发生改变，每次上移100%，动画内容在main里设置*/
+    -webkit-transform:translateY(0%)
+}
+#nav-control-2:checked~.main{
+    -webkit-transform:translateY(-100%)
+}
+#nav-control-3:checked~.main{
+    -webkit-transform:translateY(-200%)
+}
+#nav-control-4:checked~.main{
+    -webkit-transform:translateY(-300%)
+}
+.desc{/*页面上方的大三角*/
+    width:200px;
+    height: 200px;
+    background-color: #99CCFF;
+    /*background-color: #fa96b5;!*与a背景色相同*!*/
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-left: -100px;/*把矩形放到中央*/
+    -webkit-transform:translateY(-50%) rotate(45deg) ;/*旋转45度*/
+
+}
+[data-icon]:after{
+    content:attr(data-icon);/*获取属性*/
+    width: 200px;
+    height: 200px;
+    color:#fff;
+    font-size:90px;
+    text-align:center;
+    line-height:200px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-100px 0 0 -100px;
+    -webkit-transform:rotate(-45deg) translateY(25%);/*把H挪到三角的正中央*/
+    font-family: "Raphaelicons";
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2); /*图标的阴影*/
+}
+.main1 h2{
+    color:#99CCFF;
+    /*color:#e23a6e;!*颜色啊颜色要改的呀*!*/
+    font-size: 54px;
+    line-height: 50px;
+    text-align: center;
+    font-weight:900;
+    width:80%;
+    position: absolute;
+    left: 10%;
+    top:50%;
+    margin-top:-70px;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+    -webkit-backface-visibility: hidden;
+}
+#nav-control-1:checked ~ .main #panel-1 h2,
+#nav-control-2:checked ~ .main #panel-2 h2,
+#nav-control-3:checked ~ .main #panel-3 h2,
+#nav-control-4:checked ~ .main #panel-4 h2{
+    -webkit-animation: movedown 0.6s ease-in-out 0.2s backwards;
+}
+@-webkit-keyframes movedown {
+    0%{
+        -webkit-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.main1 p{
+    position: absolute;
+    width:90%;
+    left:5%;
+    top:50%;
+    font-size: 16px;
+    line-height: 22px;
+    padding:0;
+    text-align:center;
+    -webkit-backface-visibility:hidden;
+    color:#8b8b8b;
+    magin-top:10px;
+}
+#nav-control-1:checked ~ .main #panel-1 p,
+#nav-control-2:checked ~ .main #panel-2 p,
+#nav-control-3:checked ~ .main #panel-3 p,
+#nav-control-4:checked ~ .main #panel-4 p{
+    -webkit-animation: moveup 0.6s ease-in-out 0.2s backwards;
+}
+@-webkit-keyframes moveup {
+    0%{
+        -webkit-transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.color{
+    /*background-color: #fa96b5;!*改颜色*!*/
+    background-color:#99CCFF;
+}
+.color .desc{
+    background-color: #fff;
+}
+.color [data-icon]:after {
+    /*color: #fa96b5;*/
+    color:#99CCFF
+
+}
+.color h2{
+color: #ffffff;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.color p{
+ color: rgba(255,255,255,0.9);
+}
