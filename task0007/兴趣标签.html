@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兴趣标签</title>
+</head>
+<body>
+<input  id="input">
+<button id="button">提交</button>
+</body>
+<script>
+    var input = document.getElementById("input");
+    var btn = document.getElementById("button");
+    var hobby = new Array();
+    var i;
+    var a;
+    btn.onclick=function(){
+        hobby = input.value.split(",");
+        for(i=0;i<hobby.length;i++)
+        {
+            for(a = i+1;a<hobby.length;a++)
+            {
+                     if(hobby[a]=hobby[i])
+                     {
+                         hobby[a]="";
+                     }
+             }
+            console.log(hobby[i]);
+         }
+    }
+</script>
+</html>

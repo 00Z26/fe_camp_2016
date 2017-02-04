@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20位密码</title>
+</head>
+
+<body>
+<input  id="input">
+<button id="button">提交</button>
+</body>
+<script>
+    var input = document.getElementById("input");
+if(input.value.length = 23) {
+    var btn = document.getElementById("button");
+    btn.onclick = function () {
+        input = input.value.toUpperCase();
+        input = input.replace('-', '');
+        input = input.replace('-', '');
+        input = input.replace('-', '');
+        alert(input)
+    }
+}
+else{
+    alert("输入错误")
+    }
+</script>
+</html>

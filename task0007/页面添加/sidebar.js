@@ -1,6 +1,4 @@
-/**
- * Created by lenovo on 2017/1/27.
- */
+//根据教程写的
 (function( ){
 var Sidebar = function(eID,closebarID ){
     this.state = 'open';
@@ -8,9 +6,11 @@ var Sidebar = function(eID,closebarID ){
     this.closeBarEl = document.getElementById(closebarID||'closebar');
     var self = this;
     this.el.addEventListener('click',function(event){});
-        if( event.target !==this.el){
+
+        if (event.target !== this.el) {
             self.triggerSwitch();
         }
+
 };
     Sidebar.prototype.close = function(){
     console.log('关闭sidebar');

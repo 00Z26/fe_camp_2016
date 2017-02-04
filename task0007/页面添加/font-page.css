@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Raphaelicons";
+    src: url('fonts/raphaelicons-webfont.ttf') format('ttf'),
+    url('fonts/raphaelicons-webfont.eot') format('eot'),
+    url('fonts/raphaelicons-webfont.svg') format('svg'),
+    url('fonts/raphaelicons-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style:normal;
+}
+@font-face {
+
+    font-family: "POIRET";
+    src: url('fonts/POIRET.ttf') format('ttf');
+    font-weight: normal;
+    font-style:normal;
+}
+
+body{
+    background-color:#F2E0CA ;
+}
+img{
+    position:absolute;
+    bottom:0px;
+    left:6%;
+    width:87%;
+}
+span{
+    font-family:"Raphaelicons";
+    font-size:270%;
+}
+a{
+    text-decoration: none;
+    color: #291a1a;
+}
+
+.search_icon{
+    margin-left:95%;
+}
+h{
+    display: block;
+    position: relative;
+    margin-top: 6%;
+    text-align: center;
+    font-size: 50px;
+    font-family: "POIRET";
+}
+p{
+    display: block;
+    position: relative;
+    margin-top: 2%;
+    text-align: center;
+}
+p1{
+    display: block;
+    position: relative;
+    margin-top: 2px;
+    text-align: center;
+    font-size: 230%;
+    font-family: "Raphaelicons";
+    z-index: 1;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+#sidebar{
+    position: fixed;
+    width:50px;
+    min-height: 100%;
+    margin-top: 10%;
+}
+.item{
+    font-size:12px;
+    font-family: "Microsoft YaHei UI";
+    text-align: center;
+    margin-top: 15px;
+}
+#closeBar{
+    position: absolute;
+    cursor: pointer;
+    width:50px;
+    text-align: center;
+}
+

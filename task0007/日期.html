@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>距离周三</title>
+</head>
+<body>
+<input  id="input">
+<button id="button">提交</button>
+</body>
+<script>
+    var sDate1 = document.getElementById("input");
+    var sDate2 = 2017-2-1;
+    var sDate3 = 2017-2-8;
+    var sDate4 = 2017-2-15;
+    var sDate5 = 2017-2-22;
+    function  DateDiff(sDate1,  sDate2){    //sDate1和sDate2是2006-12-18格式
+        var  aDate,  oDate1,  oDate2,  iDays1;
+        aDate  =  sDate1.split("-");
+        oDate1  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);    //转换为12-18-2006格式
+        aDate  =  sDate2.split("-");
+        oDate2  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24);    //把相差的毫秒数转换为天数
+        return  iDays1
+    }
+    function  DateDiff(sDate1,  sDate3){
+        var  aDate,  oDate1,  oDate2,  iDays2;
+        aDate  =  sDate1.split("-");
+        oDate1  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        aDate  =  sDate3.split("-");
+        oDate2  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24);
+        return  iDays2
+    }
+    function  DateDiff(sDate1,  sDate4){
+        var  aDate,  oDate1,  oDate2,  iDays3;
+        aDate  =  sDate1.split("-");
+        oDate1  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        aDate  =  sDate4.split("-");
+        oDate2  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24);
+        return  iDays3
+    }
+    function  DateDiff(sDate1,  sDate5){
+        var  aDate,  oDate1,  oDate2,  iDays4;
+        aDate  =  sDate1.split("-");
+        oDate1  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        aDate  =  sDate5.split("-");
+        oDate2  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0]);
+        iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24);
+        return  iDays4
+    }
+    console.log(sDate1,"相差天数"+iDays1);
+    console.log(sDate2,"相差天数"+iDays2);
+    console.log(sDate3,"相差天数"+iDays3);
+    console.log(sDate4,"相差天数"+iDays4);
+</script>
+</html>
